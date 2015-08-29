@@ -23,7 +23,7 @@ create table user(
 	created_at datetime not null
 );
 
-insert into user(name,username,password,is_active,kind_id,created_at) value ("Admin","admin","admin",1,1,NOW());
+insert into user(name,username,password,is_active,kind_id,created_at) value ("Admin","admin",sha1(md5("admin")),1,1,NOW());
 
 create table album (
 	id int not null auto_increment primary key,
