@@ -6,5 +6,5 @@
 		$cat = CategoryData::getById($_POST["id"]);
 		$cat->name = $_POST["name"];
 		$cat->update();
-		Core::redir("./?r=admin/categories");
+		Core::redir("./?view=categories");
 ?>

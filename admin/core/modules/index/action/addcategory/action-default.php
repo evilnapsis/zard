@@ -6,5 +6,5 @@
 		$cat = new CategoryData();
 		$cat->name = $_POST["name"];
 		$cat->add();
-		Core::redir("./?r=admin/categories");
+		Core::redir("./?view=categories");
 ?>

@@ -5,5 +5,5 @@
 **/
 		$cat = CategoryData::getById($_GET["id"]);
 		$cat->del();
-		Core::redir("./?r=admin/categories");
+		Core::redir("./?view=categories");
 ?>
