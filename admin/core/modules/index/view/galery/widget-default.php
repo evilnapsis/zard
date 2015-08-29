@@ -1,3 +1,6 @@
+<?php
+$data["images"]= ImageData::getAll();
+?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -18,7 +21,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                    <a href="./?r=image/new" class="btn btn-default">Agregar</a><br><br>
+                    <a href="./?view=newimage" class="btn btn-default">Agregar</a><br><br>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Imagenes</h3>
@@ -44,8 +47,8 @@
                                                 </td>
                                                 <td><?=$post->title;?></td>
                                                 <td style="width:90px;">
-                                                <a href="./?r=admin/editimage&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?r=image/del&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?view=editimage&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+                                                <a href="./?action=delimage&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>

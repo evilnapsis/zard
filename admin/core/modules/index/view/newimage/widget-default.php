@@ -1,11 +1,9 @@
-<?php
-$image = ImageData::getById($_GET["id"]);
-?>
+
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Editar Imagen
+                            Agregar Imagen
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -15,7 +13,7 @@ $image = ImageData::getById($_GET["id"]);
                                   <a href="./?view=galery"><i class="fa fa-picture-o"></i> Galeria</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-asterisk"></i> Editar imagen
+                                <i class="fa fa-asterisk"></i> Nueva imagen
                             </li>
                         </ol>
                     </div>
@@ -25,29 +23,27 @@ $image = ImageData::getById($_GET["id"]);
                 <div class="row">
                     <div class="col-lg-8">
 
-                        <form role="form" method="post" action="./?action=updateimage">
+                        <form role="form" method="post" action="./?action=addimage" enctype="multipart/form-data">
 <div class="form-group">
                                 <label>Imagen </label>
-<br>
-<img src="storage/images/<?php echo $image->src;?>" class="img-responsive img-thumbnail" style="width:380px;">
+                                <input type="file" name="image" required>
 
                             </div>
                             <div class="form-group">
                                 <label>Titulo</label>
-                                <input type="text" name="title" value="<?php echo $image->title;?>" class="form-control" placeholder="Escriba titulo">
+                                <input type="text" name="title" value="" class="form-control" placeholder="Escriba titulo">
                             </div>
 
 
 
                             <div class="form-group">
                                 <label>Contenido</label>
-                                <textarea class="form-control"  placeholder="Escriba contenido" rows="10" name="description"><?php echo $image->description;?></textarea>
+                                <textarea class="form-control"  placeholder="Escriba contenido" rows="10" name="description"></textarea>
                             </div>
 
 
 
-                            <input type="hidden" name="id" value="<?=$image->id;?>">
-                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                            <button type="submit" class="btn btn-primary">Agregar</button>
 
                         </form>
 

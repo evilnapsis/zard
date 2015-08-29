@@ -1,4 +1,8 @@
 <?php
+/**
+* @author evilnapsis
+* @brief Agregar un articulo
+**/
 		$p = new PostData();
 		$p->title = $_POST["title"];
 		$p->content = $_POST["content"];
