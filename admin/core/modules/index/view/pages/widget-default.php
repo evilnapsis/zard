@@ -1,3 +1,6 @@
+<?php
+$data["posts"] = PostData::getPages();
+?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -18,13 +21,11 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                    <a href="./?r=admin/newpage" class="btn btn-default">Agregar</a><br><br>
+                    <a href="./?view=newpage" class="btn btn-default">Agregar</a><br><br>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Paginas</h3>
                             </div>
-                                <div class="panel-body">
-                                <div class="table-responsive">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -39,16 +40,14 @@
                                                 <td style="width:10px;"></td>
                                                 <td><?=$post->title;?></td>
                                                 <td style="width:95px;">
-                                                <a href="./?r=index/page&id=<?=$post->id;?>" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
-                                                <a href="./?r=admin/editpage&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?r=admin/delpage&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="../?view=page&id=<?=$post->id;?>" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+                                                <a href="./?view=editpage&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+                                                <a href="./?action=delpage&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
-                                    </div>
-                            </div>
                         </div>
                     </div>
                 </div>

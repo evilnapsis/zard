@@ -9,10 +9,10 @@ $post = PostData::getById($_GET["id"]);
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                  <a href="./?r=admin/index"><i class="fa fa-dashboard"></i> Dashboard</a>
+                                  <a href="./?view=index"><i class="fa fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li>
-                                  <a href="./?r=admin/pages"><i class="fa fa-file"></i> Paginas</a>
+                                  <a href="./?view=pages"><i class="fa fa-file"></i> Paginas</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-asterisk"></i> Editar pagina
@@ -25,7 +25,7 @@ $post = PostData::getById($_GET["id"]);
                 <div class="row">
                     <div class="col-lg-8">
 
-                        <form role="form" method="post" action="./?r=post/updatepage">
+                        <form role="form" method="post" action="./?action=updatepage">
                             <div class="form-group">
                                 <label>Titulo</label>
                                 <input type="text" name="title" value="<?php echo $post->title;?>" class="form-control" placeholder="Escriba titulo">

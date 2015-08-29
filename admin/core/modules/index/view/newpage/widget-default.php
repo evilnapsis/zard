@@ -7,10 +7,10 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                  <a href="./?r=admin/index"><i class="fa fa-dashboard"></i> Dashboard</a>
+                                  <a href="./?view=index"><i class="fa fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li>
-                                  <a href="./?r=admin/pages"><i class="fa fa-file"></i> Paginas</a>
+                                  <a href="./?view=pages"><i class="fa fa-file"></i> Paginas</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-asterisk"></i> Nueva pagina
@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-8">
 
-                        <form role="form" method="post" action="./?r=post/addpage" enctype="multipart/form-data">
+                        <form role="form" method="post" action="./?action=addpage" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Titulo</label>
                                 <input type="text" name="title" class="form-control" placeholder="Escriba titulo">
