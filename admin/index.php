@@ -11,4 +11,8 @@ $lb = new Lb();
 $lb->loadModule("index");
 
 
+/**
+* Zard CMS
+**/
+
 ?>

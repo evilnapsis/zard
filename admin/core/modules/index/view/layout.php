@@ -41,41 +41,24 @@ if(Session::getUID()!=""):
   $u = UserData::getById(Session::getUID());
 ?>
          <ul class="nav navbar-nav">
-          <li><a href="index.php?view=newreservation"><i class="fa fa-asterisk"></i> Nuevo Evento</a></li>
+          <li><a href="index.php?view=newpost"><i class="fa fa-asterisk"></i> Nuevo Post</a></li>
           </ul> 
           <ul class="nav navbar-nav side-nav">
 
-<li>
-                        <a href="./?view=posts"><i class="fa fa-fw fa-th-large"></i> Posts</a>
-                    </li>
-                    <li>
-                        <a href="./?view=galery"><i class="fa fa-fw fa-picture-o"></i> Galeria</a>
-                    </li>
-                    <li>
-                        <a href="./?view=pages"><i class="fa fa-fw fa-file"></i> Paginas</a>
-                    </li>
-
-                    <li>
-                        <a href="./?view=comments"><i class="fa fa-fw fa-comments"></i> Comentarios</a>
-                    </li>
-                    <li>
-                        <a href="./?view=msgs"><i class="fa fa-fw fa-envelope-o"></i> Mensajes</a>
-                    </li>
-
-                    <li>
-                        <a href="./?view=categories"><i class="fa fa-fw fa-th-list"></i> Categorias</a>
-                    </li>
-                            <li>
-                                <a href="./?view=users"><i class="fa fa-fw fa-users"></i> Usuarios</a>
-                            </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-cogs"></i> Configuracion <i class="fa fa-fw fa-caret-down"></i></a>
+<li><a href="./"><i class="fa fa-fw fa-dashboard"></i> Inicio</a></li>
+<li><a href="./?view=posts"><i class="fa fa-fw fa-th-large"></i> Posts</a></li>
+                    <li><a href="./?view=galery"><i class="fa fa-fw fa-picture-o"></i> Galeria</a></li>
+                    <li><a href="./?view=pages"><i class="fa fa-fw fa-file"></i> Paginas</a></li>
+                    <li><a href="./?view=comments"><i class="fa fa-fw fa-comments"></i> Comentarios</a></li>
+                    <li><a href="./?view=msgs"><i class="fa fa-fw fa-envelope-o"></i> Mensajes</a></li>
+                    <li><a href="./?view=categories"><i class="fa fa-fw fa-th-list"></i> Categorias</a></li>    
+                    <li>        <a href="./?view=users"><i class="fa fa-fw fa-users"></i> Usuarios</a></li>
+                    <li><a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-cogs"></i> Configuracion <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="./?view=generalcfg">General</a>
-                            </li>
-                        </ul>
-                    </li>
+      </li>
+                        </ul></li>
 
 
           <?php if($u->is_admin):?>

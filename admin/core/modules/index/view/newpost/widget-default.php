@@ -1,5 +1,4 @@
-
-                <!-- Page Heading -->
+               <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
@@ -7,10 +6,10 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                  <a href="./?r=admin/index"><i class="fa fa-dashboard"></i> Dashboard</a>
+                                  <a href="./?view=index"><i class="fa fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li>
-                                  <a href="./?r=admin/posts"><i class="fa fa-file"></i> Posts</a>
+                                  <a href="./?view=posts"><i class="fa fa-file"></i> Posts</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-asterisk"></i> Nuevo post
@@ -23,7 +22,7 @@
                 <div class="row">
                     <div class="col-lg-8">
 
-                        <form role="form" method="post" action="./?r=post/add" enctype="multipart/form-data">
+                        <form role="form" method="post" action="./?action=addpost" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Titulo</label>
                                 <input type="text" name="title" class="form-control" placeholder="Escriba titulo">
