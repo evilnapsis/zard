@@ -27,8 +27,6 @@ $comments = CommentData::getAll();
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Comentarios</h3>
                             </div>
-                                <div class="panel-body">
-                                <div class="table-responsive">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -53,23 +51,21 @@ $comments = CommentData::getAll();
                                                 <td><?php if($post->comment_id==null){ echo "<a href='./?r=index/post&id=".$thepost->id."'>".$thepost->title."</a>";}?></td>
                                                 <td>
                                                 <?php if(!$post->is_public):?>
-                                                <a href="./?r=admin/aprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-primary"><i class="fa fa-thumbs-up"></i></a>
+                                                <a href="./?action=aprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-primary"><i class="fa fa-thumbs-up"></i></a>
                                             <?php else:?>
-                                                <a href="./?r=admin/unaprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-info"><i class="fa fa-thumbs-up fa-rotate-180"></i></a>
+                                                <a href="./?action=unaprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-info"><i class="fa fa-thumbs-up fa-rotate-180"></i></a>
                                             <?php endif;?>
 <!-- Button trigger modal -->
 <?php if($post->comment_id==null):?>
   <a data-toggle="modal" href="#answermsg<?=$post->id;?>" class="btn btn-success btn-xs"><i class="fa fa-send"></i></a>
 <?php endif;?>
-                                                <a href="./?r=admin/editpost&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?r=admin/delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?action=editpost&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+                                                <a href="./?action=delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
-                                    </div>
-                            </div>
                         </div>
 
                                         <?php foreach($comments as $post):?>
@@ -82,7 +78,7 @@ $comments = CommentData::getAll();
           <h4 class="modal-title">Responder mensaje</h4>
         </div>
         <div class="modal-body">
-<form role="form" method="post" action="./?r=admin/answercomment">
+<form role="form" method="post" action="./?action=answercomment">
 <h4>MENSAJE</h4>
 <p><b>Nombre:</b> <?php echo $post->name;?></p>
 <p><b>Email:</b> <?php echo $post->email;?></p>
