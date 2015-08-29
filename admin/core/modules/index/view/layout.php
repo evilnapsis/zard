@@ -61,10 +61,7 @@ if(Session::getUID()!=""):
                         </ul></li>
 
 
-          <?php if($u->is_admin):?>
-          <li><a href="index.php?view=changelog"><i class="fa fa-filter"></i> Log de cambios </a></li>
-          <li><a href="index.php?view=users"><i class="fa fa-users"></i> Usuarios </a></li>
-        <?php endif;?>
+          <li><a href="./?view=changelog"><i class="fa fa-filter"></i> Log de cambios </a></li>
           </ul>
 
 
