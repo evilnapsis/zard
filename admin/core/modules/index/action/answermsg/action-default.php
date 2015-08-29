@@ -5,5 +5,5 @@
 **/
 		$msg = CommentData::getById($_POST["comment_id"]);
 		mail($msg->email, "Respuesta", $_POST["content"]);
-		Core::redir("./?r=admin/msgs");
+		Core::redir("./?view=msgs");
 ?>

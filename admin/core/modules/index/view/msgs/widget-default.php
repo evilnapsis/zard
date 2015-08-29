@@ -25,8 +25,6 @@ $comments = CommentData::getMessages();
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Mensajes</h3>
                             </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -51,14 +49,12 @@ $comments = CommentData::getMessages();
   <a data-toggle="modal" href="#answermsg<?=$post->id;?>" class="btn btn-success btn-xs"><i class="fa fa-send"></i></a>
 <?php endif;?>
 
-                                                <a href="./?r=admin/delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?action=delmsg&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
-                                    </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,7 +71,7 @@ $comments = CommentData::getMessages();
           <h4 class="modal-title">Responder mensaje</h4>
         </div>
         <div class="modal-body">
-<form role="form" method="post" action="./?r=admin/answermsg">
+<form role="form" method="post" action="./?action=answermsg">
 <h4>MENSAJE</h4>
 <p><b>Nombre:</b> <?php echo $post->name;?></p>
 <p><b>Email:</b> <?php echo $post->email;?></p>
