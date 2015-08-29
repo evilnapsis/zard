@@ -1,2 +1,4 @@
-# desk
-Sistema de Escritorio Personal, Agenda, notas, contactos, por hacer y mas... hecho con PHP y MySQL
+# Zard CMS
+Sistema de Gestion de Contenido de Proposito General
+
+Evilnapsis 2015
