@@ -8,5 +8,5 @@
 			$key->description = $v;
 			$key->update();
 		}
-		Core::redir("./?r=admin/generalcfg");
+		Core::redir("./?view=generalcfg");
 ?>

@@ -1,3 +1,6 @@
+<?php
+$data["posts"] = ConfigData::getAll();
+?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -22,9 +25,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Posts</h3>
                             </div>
-                            <div class="panel-body">
-                                <div class="">
-                                <form method="post" action="./?r=admin/updgeneralcfg">
+                                <form method="post" action="./?action=updategeneralcfg">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -46,9 +47,6 @@
                                         </tbody>
                                     </table>
                                     </form>
-                                    </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
