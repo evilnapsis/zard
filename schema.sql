@@ -135,6 +135,6 @@ create table config(
 	advice text
 );
 
-insert into config(slug,name,description) value ("navbar_text","Texto del Navbar ","WOLF");
-insert into config(slug,name,description) value ("site_title","Titulo del sitio","My Wolf Blog");
-insert into config(slug,name,description) value ("site_description","Descripcion del Sitio","Un blog para hablar sobre wolf");
+insert into config(slug,name,description) value ("navbar_text","Texto del Navbar ","ZARD CMS");
+insert into config(slug,name,description) value ("site_title","Titulo del sitio","My Zard Blog");
+insert into config(slug,name,description) value ("site_description","Descripcion del Sitio","Just Another Zard blog");
