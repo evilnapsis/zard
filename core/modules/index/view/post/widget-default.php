@@ -1,5 +1,6 @@
 <?php
 $post=PostData::getById($_GET["id"]);
+$comments = CommentData::getApprovedByPostId($post->id);
 Viewer::addView($post->id,"post_id","post_view");
 ?>
 <div class="container">
@@ -21,6 +22,37 @@ $image = ImageData::getById($post->image_id);
 
 		<?php echo nl2br($post->content);?>
 		<br><br>
+<?php if(count($comments)>0):?>
+<h4>Comentarios (<?php echo count($comments)?>)</h4>
+<ul class="media-list">
+<?php foreach($comments as $comment):
+$answers = CommentData::getApprovedByCommentId($comment->id);
+?>
+  <li class="media">
+    <div class="media-body">
+      <h4 class="media-heading"><?php echo $comment->name;?></h4>
+      <p><?php echo $comment->content; ?></p>
+<?php if(count($answers)>0):?>
+<?php foreach($answers as $answer):
+?>
+
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading"><?php echo $answer->name;?></h4>
+      <p><?php echo $answer->content; ?></p>
+    </div>
+  </div>
+
+<?php endforeach; ?>
+<?php endif; ?>
+
+    </div>
+
+  </li>
+
+<?php endforeach; ?>
+</ul>
+<?php endif;?>
 		<h4>Deja un comentario</h4>
 <form role="form" method="post" action="./?action=addcomment">
   <div class="form-group">

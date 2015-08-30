@@ -92,8 +92,14 @@ class CommentData {
 	}
 
 
-	public static function getLast10(){
-		$sql = "select * from ".self::$tablename." order by created_at desc limit 10";
+	public static function getApprovedByPostId($id){
+		$sql = "select * from ".self::$tablename." where post_id=$id and is_public order by created_at";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new CommentData());
+	}
+
+	public static function getApprovedByCommentId($id){
+		$sql = "select * from ".self::$tablename." where comment_id=$id and is_public order by created_at";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new CommentData());
 	}
