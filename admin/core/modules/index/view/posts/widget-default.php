@@ -40,7 +40,7 @@ $data["posts"]= PostData::getAll();
                                                 <td style="width:100px;">
                                                 <a href="../?view=post&id=<?=$post->id;?>" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
                                                 <a href="./?view=editpost&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?view=delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?action=delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
