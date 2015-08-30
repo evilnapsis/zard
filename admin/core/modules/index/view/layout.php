@@ -14,6 +14,11 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="js/jquery-1.10.2.js"></script>
+<script src="res/morris/raphael-min.js"></script>
+<script src="res/morris/morris.js"></script>
+  <link rel="stylesheet" href="res/morris/morris.css">
+  <link rel="stylesheet" href="res/morris/example.css">
+
   </head>
 
   <body>

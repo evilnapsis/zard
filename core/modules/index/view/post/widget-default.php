@@ -49,3 +49,4 @@ $image = ImageData::getById($post->image_id);
 	</div>
 	
 </div>
+</div>
