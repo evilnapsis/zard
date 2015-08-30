@@ -63,11 +63,10 @@ if(Session::getUID()!=""):
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="./?view=generalcfg">General</a>
-      </li>
-                        </ul></li>
+                            </li>
+                        </ul>
+                    </li>
 
-
-          <li><a href="./?view=changelog"><i class="fa fa-filter"></i> Log de cambios </a></li>
           </ul>
 
 
