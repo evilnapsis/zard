@@ -9,10 +9,10 @@ $user = UserData::getById($_GET["id"]);
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                  <a href="./?r=admin/index"><i class="fa fa-dashboard"></i> Dashboard</a>
+                                  <a href="./?view=index"><i class="fa fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li>
-                                  <a href="./?r=admin/users"><i class="fa fa-users"></i> Usuarios</a>
+                                  <a href="./?view=users"><i class="fa fa-users"></i> Usuarios</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-asterisk"></i> Editar usuario
@@ -25,7 +25,7 @@ $user = UserData::getById($_GET["id"]);
                 <div class="row">
                     <div class="col-lg-8">
 
-                        <form role="form" method="post" action="./?r=user/update" enctype="multipart/form-data">
+                        <form role="form" method="post" action="./?action=updateuser" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Imagen (480x480)</label>
                                 <input type="file" name="image">

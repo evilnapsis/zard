@@ -1,3 +1,6 @@
+<?php
+$data["posts"]=UserData::getAll();
+?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -18,13 +21,11 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                    <a href="./?r=admin/newuser" class="btn btn-default">Agregar</a><br><br>
+                    <a href="./?view=newuser" class="btn btn-default">Agregar</a><br><br>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-users fa-fw"></i> Usuarios</h3>
                             </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -45,15 +46,13 @@
                                                 <td><?=$post->email;?></td>
                                                 <td><?=$post->getKind()->name;?></td>
                                                 <td style="width:70px;">
-                                                <a href="./?r=admin/edituser&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?r=admin/deluser&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?view=edituser&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+                                                <a href="./?action=deluser&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
-                                    </div>
-                            </div>
                         </div>
                     </div>
                 </div>
