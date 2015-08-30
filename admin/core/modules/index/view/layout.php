@@ -41,6 +41,7 @@ if(Session::getUID()!=""):
   $u = UserData::getById(Session::getUID());
 ?>
          <ul class="nav navbar-nav">
+          <li><a href="../"><i class="fa fa-globe"></i> Ver Blog</a></li>
           <li><a href="index.php?view=newpost"><i class="fa fa-asterisk"></i> Nuevo Post</a></li>
           </ul> 
           <ul class="nav navbar-nav side-nav">
