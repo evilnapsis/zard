@@ -12,11 +12,12 @@ Viewer::addView($post->id,"post_id","post_view");
 $image = ImageData::getById($post->image_id);
 ?>
 <br>
-<img src="admin/storage/images/<?php echo $image->src;?>" class="img-responsive img-thumbnail" style="width:480px;">
+<img src="admin/storage/images/<?php echo $image->src;?>" class="img-responsive img-thumbnail">
 <?php endif;?>
-
-
+<div class="clearfix"></div>
+<div>
 		<?php echo nl2br($post->content);?>
+</div>
 		<br><br>
 <?php if(count($comments)>0):?>
 <h4>Comentarios (<?php echo count($comments)?>)</h4>
