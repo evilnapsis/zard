@@ -35,6 +35,17 @@
           <li><a href="./"> INICIO</a></li>
           <li><a href="./?view=contact"> CONTACTO</a></li>
       </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="navbar-form navbar-left" role="search">
+        <input type="hidden" name="view" value="search">
+      <div class="form-group">
+        <input type="text" name="q" required class="form-control" placeholder="Buscar ...">
+      </div>
+      <button type="submit" class="btn btn-default">&nbsp;<i class="fa fa-search"></i>&nbsp;</button>
+    </form>
+      </li>
+      </ul>
       <!--
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#">Link</a></li>
