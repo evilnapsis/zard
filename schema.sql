@@ -1,5 +1,5 @@
-create database wolf1;
-use wolf1;
+create database zard;
+use zard;
 
 create table kind(
 	id int not null auto_increment primary key,
@@ -68,8 +68,7 @@ create table post (
 	foreign key(user_id) references user(id)
 );
 
-insert into post(title,content,is_public,user_id,created_at) value("Bienvenido a Wolf CMS","<p>Wolf CMS es un sistema gestor de contenidos con el que puedes hacer tu blog o pagina personal.</p><br><p>En Wolf puedes administrar tu biblioteca de imagenes, recibir y responder comentarios y mucho mas.</p>",1,1,NOW());
-insert into post(title,content,is_public,user_id,created_at) value("Por que WOLF","<p>Wolf palabra en ingles que significa lobo en espa&ntilde;ol.</p><br><p>Estaba pensando en un nombre corto e inspitador, mientras veia la serie <b>Games of Thrones</b> me llamaron la atencion los lobos que les regala Ed Stark a sus hijos y los acompa&ntilde;an en toda la trama de la historia.</p>",1,1,NOW());
+insert into post(title,content,is_public,user_id,created_at) value("Bienvenido a ZARD CMS","<p>ZARD CMS es un sistema gestor de contenidos con el que puedes hacer tu blog o pagina personal.</p><br><p>En ZARD CMS puedes administrar tu biblioteca de imagenes, recibir y responder comentarios y mucho mas.</p>",1,1,NOW());
 
 create table category(
 	id int not null auto_increment primary key,
