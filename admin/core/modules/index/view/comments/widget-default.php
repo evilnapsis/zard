@@ -49,7 +49,7 @@ $comments = CommentData::getAll();
                                                 <td><?=$post->name;?></td>
                                                 <td><?=$post->email;?></td>
                                                 <td><?php if($post->comment_id==null){ echo "<a href='./?r=index/post&id=".$thepost->id."'>".$thepost->title."</a>";}?></td>
-                                                <td>
+                                                <td style="width:120px;">
                                                 <?php if(!$post->is_public):?>
                                                 <a href="./?action=aprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-primary"><i class="fa fa-thumbs-up"></i></a>
                                             <?php else:?>
@@ -59,7 +59,7 @@ $comments = CommentData::getAll();
 <?php if($post->comment_id==null):?>
   <a data-toggle="modal" href="#answermsg<?=$post->id;?>" class="btn btn-success btn-xs"><i class="fa fa-send"></i></a>
 <?php endif;?>
-                                                <a href="./?action=editpost&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+<!--                                                <a href="./?action=editpost&id=<?=$post->id;?>" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></a> -->
                                                 <a href="./?action=delpost&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
