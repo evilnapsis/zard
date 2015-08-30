@@ -77,7 +77,7 @@
   <li><a href="./?view=contact">Contacto</a></li>
   <li><a href="./admin/">Acceder</a></li>
 </ul>
-<p style="padding:5px 0px;"><b>ZARD CMS v2.0</b> - MIT License</p>
+<p style="padding:5px 0px;"><b>ZARD CMS v1.5</b> - MIT License</p>
 </div>
 </div>
 
