@@ -5,13 +5,9 @@ Viewer::addView($post->id,"post_id","post_view");
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-9">
 		<h1><?php echo $post->title;?></h1>
 	<hr>
-
-<div class="row">
-		<div class="col-md-9">
-
 <?php if($post->show_image&&$post->image_id!=null):
 $image = ImageData::getById($post->image_id);
 ?>
@@ -70,13 +66,13 @@ $answers = CommentData::getApprovedByCommentId($comment->id);
   <input type="hidden" name="post_id" value="<?=$post->id;?>">
   <button type="submit" class="btn btn-default">Enviar comentario</button>
 </form>
-		</div>
-		<div class="col-md-3">
-		</div>
-	</div>
+
 
 		<br><br>
 
+		</div>
+<div class="col-md-3">
+		<?php Action::execute("widgets",array());?>
 		</div>
 	</div>
 	
