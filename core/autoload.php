@@ -1,20 +1,22 @@
 <?php
 
-include "controller/Core.php";
-include "controller/View.php";
-include "controller/Module.php";
-include "admin/core/controller/Database.php";
-include "controller/Executor.php";
+include "z-admin/core/controller/Core.php";
+include "z-admin/core/controller/View.php";
+include "z-admin/core/controller/Module.php";
+include "z-admin/core/controller/Database.php";
+include "z-admin/core/controller/Executor.php";
 
 // 10 octubre 2014
-include "controller/Lb.php";
-include "controller/Model.php";
-include "controller/Bootload.php";
-include "controller/Action.php";
+include "z-admin/core/controller/Lb.php";
+include "z-admin/core/controller/Model.php";
+include "z-admin/core/controller/Bootload.php";
+include "z-admin/core/controller/Action.php";
 
-include "controller/class.upload.php";
-include "admin/core/controller/Viewer.php";
-include "admin/core/controller/Session.php";
-include "admin/core/controller/IpLogger.php";
+include "z-admin/core/controller/class.upload.php";
+include "z-admin/core/controller/Viewer.php";
+include "z-admin/core/controller/Session.php";
+include "z-admin/core/controller/IpLogger.php";
+
+
 
 ?>
