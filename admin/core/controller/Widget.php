@@ -40,7 +40,7 @@ public static function recent_posts($val){
 	return $ret;
 }
 
-/* Recent Posts
+/* Recent Comments
 * widget para mostrar los ultimos comentarios
 */
 public static function recent_comments($val){

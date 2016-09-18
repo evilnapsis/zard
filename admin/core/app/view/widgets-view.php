@@ -19,6 +19,7 @@ $data["categories"]=WidgetData::getAll();
 
 <!-- Button trigger modal -->
   <a data-toggle="modal" href="#newcategory" class="btn btn-default">Nuevo Widget</a>
+  <a data-toggle="modal" href="#widhelp" class="btn btn-default">Ayuda</a>
 
   <!-- Modal -->
   <div class="modal fade" id="newcategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -52,6 +53,46 @@ $data["categories"]=WidgetData::getAll();
 
   <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="widhelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Ayuda en widgets</h4>
+        </div>
+        <div class="modal-body">
+
+        <h2>Widgets</h2>
+        <p>Los widgets se muestran en la parte de la izquierda de los articulos.</p>
+        <ul>
+          <li>Titulo: es el titulo que se muestra en el encabezado del widget, este titulo se muestra.</li>
+          <li>Funcion: debe ser una funcion valida predeterminada por el sistema o creado por un tercero.</li>
+          <li>Parametros: Son los parametros que recibe la funcion creada, en caso de ser varios parametros estos se deben separar por comas (",").</li>
+          <li>Orden: El orden es un numero entero que sirve para "ordenar" los elementos, siempre se ordena del menor al mayor.</li>
+        </ul>
+        <h4>Custom text</h4>
+        <p>Widget que muestra cualquier texto escrito en el parametro.</p>
+        <ul><li>Funcion: custom_text</li>
+        <li>Parametros: Cualquier texto escrito por el usuario</li>
+        </ul>
+        <h4>Articulos recientes</h4>
+        <p>Muesta un numero de terminado de articulos recientes.</p>
+        <ul><li>Funcion: recent_posts</li>
+        <li>Parametros: un numero entero que representa la cantidad de articulos que se muestran </li>
+        </ul>
+        <h4>Comentarios recientes</h4>
+        <p>Muesta un numero de terminado de cometarios recientes.</p>
+        <ul><li>Funcion: recent_comments</li>
+        <li>Parametros: un numero entero que representa la cantidad de comentarios que se muestran </li>
+        </ul>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
