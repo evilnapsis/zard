@@ -3,9 +3,9 @@
 <meta charset="utf8"/>
 <title>.: Zard :.</title>
 
-<link rel="stylesheet" type="text/css" href="z-admin/z-assets/res/bootstrap3/css/bootstrap.min.css">
-<script src="z-admin/z-assets/res/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="z-admin/z-assets/res/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="admin/z-assets/res/bootstrap3/css/bootstrap.min.css">
+<script src="admin/z-assets/res/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="admin/z-assets/res/font-awesome/css/font-awesome.min.css">
 </head>
 <?php 
 /// print_r($_GLOBAL); 
@@ -82,7 +82,7 @@
 </div>
 
 </div>
-<script src="z-admin/z-assets/res/bootstrap3/js/bootstrap.min.js"></script>
+<script src="admin/z-assets/res/bootstrap3/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,9 @@ Viewer::addView($post->id,"post_id","post_view");
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
+    <?php if(isset($_SESSION["user_id"])):?>
+      <p><a href="./admin/?view=editpost&id=<?php echo $post->id; ?>" class="btn btn-warning">Modificar Articulo</a>
+    <?php endif;?>
 		<h1><?php echo $post->title;?></h1>
 	<hr>
 <?php if($post->show_image&&$post->image_id!=null):
@@ -50,11 +53,14 @@ $answers = CommentData::getApprovedByCommentId($comment->id);
 <?php endforeach; ?>
 </ul>
 <?php endif;?>
-		<h4>Deja un comentario</h4>
+<div class="row">
+<div class="col-md-7">
+    <div class="well">
+    <h4>Deja un comentario</h4>
 <form role="form" method="post" action="./?action=addcomment">
   <div class="form-group">
     <label for="exampleInputEmail1">Nombre</label>
-    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+    <input type="text" name="name" required class="form-control" id="exampleInputEmail1" placeholder="Nombre">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Correo electronico</label>
@@ -67,8 +73,9 @@ $answers = CommentData::getApprovedByCommentId($comment->id);
   <input type="hidden" name="post_id" value="<?=$post->id;?>">
   <button type="submit" class="btn btn-default">Enviar comentario</button>
 </form>
-
-
+</div>
+</div>
+</div>
 		<br><br>
 
 		</div>

@@ -8,7 +8,11 @@
 		<?php foreach($posts as $post):?>
 				<h2><a href="./?view=post&id=<?php echo $post->id; ?>"><?php echo $post->title;?></a></h2>
 				<p><?php echo $post->content;?>.</p>
+				<?php if($post->kind==1):?>
 				<a href="./?view=post&id=<?php echo $post->id; ?>" class="btn btn-default"> Leer mas <i class="fa fa-arrow-right"></i> </a>
+			<?php elseif($post->kind==2):?>
+				<a href="./?view=page&id=<?php echo $post->id; ?>" class="btn btn-default"> Leer mas <i class="fa fa-arrow-right"></i> </a>
+			<?php endif; ?>
 			<?php endforeach; ?>
 		<?php else:?>
 		<div class="jumbotron">

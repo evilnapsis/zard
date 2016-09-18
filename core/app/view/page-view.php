@@ -6,6 +6,9 @@ Viewer::addView($post->id,"post_id","post_view");
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+    <?php if(isset($_SESSION["user_id"])):?>
+      <p><a href="./admin/?view=editpage&id=<?php echo $post->id; ?>" class="btn btn-warning">Modificar Pagina</a>
+    <?php endif;?>
 		<h1><?php echo $post->title;?></h1>
 	<hr>
 

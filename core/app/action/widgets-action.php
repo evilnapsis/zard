@@ -1,5 +1,5 @@
 <?php
-$categories = CategoryData::getAll();
+$categories = TaxData::getCategories();
 ?>
 <?php if(count($categories)>0):?>
 <div class="panel panel-default">

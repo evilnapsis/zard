@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 include "core/autoload.php";
 ob_start();
 session_start();
-Core::$root="z-admin/";
+Core::$root="admin/";
 Core::$theme = "";
 
 // si quieres que se muestre las consultas SQL debes decomentar la siguiente linea
