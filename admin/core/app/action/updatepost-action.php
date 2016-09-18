@@ -13,6 +13,32 @@
 		if(isset($_POST["show_image"])){ $p->show_image=1;}
 		$p->update();
 
+
+		if(isset($_POST["setimage"]) && $_POST["setimage"]==0){
+				if(isset($_FILES["image"])){
+					$image=new Upload($_FILES["image"]);
+					if($image->uploaded){
+						$image->Process("storage/images/");
+						if($image->processed){
+							$img = new ImageData();
+							$img->src = $image->file_dst_name;
+							$img->user_id=$_SESSION["user_id"];
+							$imgx=$img->add();
+							$p->image_id=$imgx[1];
+							$p->update_image();
+
+						}
+					}
+				}
+			}
+
+		if(isset($_POST["setimage"]) && $_POST["setimage"]==1){
+				$p->image_id=$_POST["image_id"];
+				$p->update_image();
+
+		}
+
+
 if(isset($_POST["category_id"])&&count($_POST["category_id"])>0){
 		$sels = $_POST["category_id"];
 		$asigs = PostTaxData::getAllByPostId($_POST["id"]);

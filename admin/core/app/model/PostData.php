@@ -42,6 +42,10 @@ class PostData {
 		Executor::doit($sql);
 	}
 
+	public function update_image(){
+		$sql = "update ".self::$tablename." set image_id=\"$this->image_id\" where id=$this->id";
+		Executor::doit($sql);
+	}
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);

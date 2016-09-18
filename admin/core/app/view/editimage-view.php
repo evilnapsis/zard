@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $image = ImageData::getById($_GET["id"]);
 ?>
@@ -59,3 +60,4 @@ $image = ImageData::getById($_GET["id"]);
                 </div>
                 <!-- /.row -->
 <br><br><br><br><br>
+</section>

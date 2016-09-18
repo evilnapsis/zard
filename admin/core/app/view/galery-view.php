@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $data["images"]= ImageData::getAll();
 ?>
@@ -22,12 +23,9 @@ $data["images"]= ImageData::getAll();
                 <div class="row">
                     <div class="col-lg-12">
                     <a href="./?view=newimage" class="btn btn-default">Agregar</a><br><br>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Imagenes</h3>
-                            </div>
-                                <div class="panel-body">
-                                <div class="table-responsive">
+                        <div class="box box-primary">
+                                <div class="box-body">
+                                <div class="">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -60,3 +58,4 @@ $data["images"]= ImageData::getAll();
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>

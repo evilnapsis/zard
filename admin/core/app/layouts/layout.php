@@ -49,6 +49,9 @@
             <span class="sr-only">Toggle navigation</span>
           </a>
           <!-- Navbar Right Menu -->
+            <ul class="nav navbar-nav">
+            <li><a href="../" target="_blank"><i class="fa fa-globe"></i> Ver Sitio</a></li>
+            </ul>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
 
