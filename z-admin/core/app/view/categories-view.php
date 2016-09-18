@@ -1,5 +1,6 @@
+<section class="content">
 <?php
-$data["categories"]=CategoryData::getAll();
+$data["categories"]=TaxData::getCategories();
 ?>
                 <!-- Page Heading -->
                 <div class="row">
@@ -28,7 +29,7 @@ $data["categories"]=CategoryData::getAll();
           <h4 class="modal-title">Nueva categoria</h4>
         </div>
         <div class="modal-body">
-<form role="form" method="post" action="./?action=addcategory">
+<form role="form" method="post" action="./?action=taxs&opt=addcat">
   <div class="form-group">
     <label for="exampleInputEmail1">Nombre</label>
     <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
@@ -46,10 +47,8 @@ $data["categories"]=CategoryData::getAll();
                 <div class="row">
                     <div class="col-lg-12">
                                 <?php if(count($data["categories"])>0):?>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Categorias</h3>
-                            </div>
+                        <div class="box box-primary">
+                            <div class="box-body">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -64,12 +63,13 @@ $data["categories"]=CategoryData::getAll();
                                                 <td style="width:65px;">
 <!-- Button trigger modal -->
   <a data-toggle="modal" href="#editcategory<?=$post->id;?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                                                <a href="./?action=delcategory&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
+                                                <a href="./?action=taxs&opt=delcat&id=<?=$post->id;?>" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
+                        </div>
                         </div>
 
 
@@ -83,7 +83,7 @@ $data["categories"]=CategoryData::getAll();
           <h4 class="modal-title">Editar categoria</h4>
         </div>
         <div class="modal-body">
-<form role="form" method="post" action="./?action=updatecategory">
+<form role="form" method="post" action="./?action=taxs&opt=updatecat">
   <div class="form-group">
     <label for="exampleInputEmail1">Nombre</label>
     <input type="text" name="name" class="form-control" value="<?php echo $post->name; ?>" id="exampleInputEmail1" placeholder="Nombre">
@@ -104,3 +104,4 @@ $data["categories"]=CategoryData::getAll();
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>

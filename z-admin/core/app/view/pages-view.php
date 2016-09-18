@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $data["posts"] = PostData::getPages();
 ?>
@@ -21,11 +22,9 @@ $data["posts"] = PostData::getPages();
 
                 <div class="row">
                     <div class="col-lg-12">
-                    <a href="./?view=newpage" class="btn btn-default">Agregar</a><br><br>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Paginas</h3>
-                            </div>
+                    <a href="./?view=newpage" class="btn btn-default">Nueva pagina</a><br><br>
+                        <div class="box box-primary">
+                            <div class="box-body">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -49,6 +48,8 @@ $data["posts"] = PostData::getPages();
                                         </tbody>
                                     </table>
                         </div>
+                        </div>
                     </div>
                 </div>
                 <!-- /.row -->
+</section>

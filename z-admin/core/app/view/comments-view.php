@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $comments = CommentData::getAll();
 ?>
@@ -106,3 +107,4 @@ $comments = CommentData::getAll();
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>

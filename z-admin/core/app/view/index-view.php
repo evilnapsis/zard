@@ -4,11 +4,12 @@ $today_posts = PostData::countAllFromToday();
 $pending_comments = CommentData::countPendings();
 
 ?>
+<section class="content">
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Wolf <small>Vision general</small>
+                        <h1 class="">
+                            Zard <small>Vision general</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -84,11 +85,11 @@ $pending_comments = CommentData::countPendings();
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Visitas (Ultimos 30 dias)</h3>
+                        <div class="box box-primary">
+                            <div class="box-header">
+                                <h3 class=""><i class="fa fa-bar-chart-o fa-fw"></i> Visitas (Ultimos 30 dias)</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="box-body">
 
 <div id="graph" class="animate" data-animate="fadeInUp" ></div>
 
@@ -125,3 +126,4 @@ Morris.Area({
                 </div>
                 <!-- /.row -->
 
+</section>

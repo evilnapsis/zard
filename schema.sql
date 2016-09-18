@@ -56,32 +56,36 @@ Kind of post
 create table post (
 	id int not null auto_increment primary key,
 	image_id int ,
-	title varchar(200) not null,
+	title varchar(255) not null,
+	slug varchar(255) not null,
 	content text not null,
-	is_public boolean not null default 0,
 	accept_comments boolean not null default 1,
 	show_image boolean not null default 1,
 	created_at datetime not null,
+	updated_at datetime not null,
 	user_id int not null,
+	status int default 1,
+	visibility int default 1,
 	kind int default 1,
 	foreign key(image_id) references image(id),
 	foreign key(user_id) references user(id)
 );
 
-insert into post(title,content,is_public,user_id,created_at) value("Bienvenido a ZARD CMS","<p>ZARD CMS es un sistema gestor de contenidos con el que puedes hacer tu blog o pagina personal.</p><br><p>En ZARD CMS puedes administrar tu biblioteca de imagenes, recibir y responder comentarios y mucho mas.</p>",1,1,NOW());
+insert into post(title,content,status,user_id,created_at) value("Bienvenido a ZARD CMS","<p>ZARD CMS es un sistema gestor de contenidos con el que puedes hacer tu blog o pagina personal.</p><br><p>En ZARD CMS puedes administrar tu biblioteca de imagenes, recibir y responder comentarios y mucho mas.</p>",1,1,NOW());
 
-create table category(
+create table tax(
 	id int not null auto_increment primary key,
-	name varchar(50) not null,
-	created_at datetime not null,
-	category_id int ,
-	foreign key(category_id) references category(id)
-	);
+	name varchar(255) not null,
+	slug varchar(255) not null,
+	kind int, /* 1. category, 2. tag */
+	tax_id int,
+	foreign key(tax_id) references tax(id)
+);
 
-create table post_category(
+create table post_tax(
 	post_id int not null,
-	category_id int ,
-	foreign key(category_id) references category(id),
+	tax_id int ,
+	foreign key(tax_id) references tax(id),
 	foreign key(post_id) references post(id)
 );
 
@@ -138,3 +142,5 @@ create table config(
 insert into config(slug,name,description) value ("navbar_text","Texto del Navbar ","ZARD CMS");
 insert into config(slug,name,description) value ("site_title","Titulo del sitio","My Zard Blog");
 insert into config(slug,name,description) value ("site_description","Descripcion del Sitio","Just Another Zard blog");
+insert into config(slug,name,description) value ("ga_code","Codigo de Google Analytics","Just Another Zard blog");
+

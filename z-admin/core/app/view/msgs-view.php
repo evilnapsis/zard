@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $comments = CommentData::getMessages();
 ?>
@@ -90,3 +91,4 @@ $comments = CommentData::getMessages();
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 <?php endforeach;?>
+</section>

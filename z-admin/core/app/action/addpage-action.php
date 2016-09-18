@@ -6,7 +6,9 @@
 		$p = new PostData();
 		$p->title = $_POST["title"];
 		$p->content = $_POST["content"];
-		if(isset($_POST["is_public"])){ $p->is_public=1;}
+		$p->status = $_POST["status"];
+		$p->visibility = $_POST["visibility"];
+
 		if(isset($_POST["accept_comments"])){ $p->accept_comments=1;}
 		if(isset($_POST["show_image"])){ $p->show_image=1;}
 		$p->user_id = 1;

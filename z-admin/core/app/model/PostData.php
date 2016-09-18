@@ -15,14 +15,14 @@ class PostData {
 	}
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (title,content,image_id,user_id,is_public,accept_comments,show_image,created_at) ";
-		$sql .= "value (\"$this->title\",\"$this->content\",$this->image_id,$this->user_id,$this->is_public,$this->accept_comments,$this->show_image,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (title,content,image_id,user_id,status,visibility,accept_comments,show_image,created_at) ";
+		 $sql .= "value (\"$this->title\",\"$this->content\",$this->image_id,$this->user_id,$this->status,$this->visibility,$this->accept_comments,$this->show_image,$this->created_at)";
 		return Executor::doit($sql);
 	}
 
 	public function addpage(){
-		$sql = "insert into ".self::$tablename." (kind,title,content,image_id,user_id,is_public,accept_comments,show_image,created_at) ";
-		$sql .= "value (2,\"$this->title\",\"$this->content\",$this->image_id,$this->user_id,$this->is_public,$this->accept_comments,$this->show_image,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (kind,title,content,image_id,user_id,status,visibility,accept_comments,show_image,created_at) ";
+		$sql .= "value (2,\"$this->title\",\"$this->content\",$this->image_id,$this->user_id,$this->status,$this->visibility,$this->accept_comments,$this->show_image,$this->created_at)";
 		return Executor::doit($sql);
 	}
 
@@ -38,7 +38,7 @@ class PostData {
 
 // partiendo de que ya tenemos creado un objecto PostData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set title=\"$this->title\",content=\"$this->content\",is_public=\"$this->is_public\",accept_comments=\"$this->accept_comments\",show_image=\"$this->show_image\" where id=$this->id";
+		$sql = "update ".self::$tablename." set title=\"$this->title\",content=\"$this->content\",status=\"$this->status\",visibility=\"$this->visibility\",accept_comments=\"$this->accept_comments\",show_image=\"$this->show_image\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $data = array();
 $data["posts"]= PostData::getAll();
@@ -18,15 +19,15 @@ $data["posts"]= PostData::getAll();
                         </ol>
                     </div>
                 </div>
+
                 <!-- /.row -->
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Posts</h3>
-                            </div>
-                                    <table class="table datatable table-bordered table-hover table-striped">
+                    <a href="./?view=newpost" class="btn btn-default"><i class='fa fa-file-text-o' ></i> Nuevo Post</a><br><br>
+                        <div class="box box-primary">
+                            <div class="box-body">
+                                    <table class="table datatable table-bordered table-hover">
                                         <thead>
                                             <tr>
                                                 <th>Titulo</th>
@@ -46,7 +47,9 @@ $data["posts"]= PostData::getAll();
                                         <?php endforeach;?>
                                         </tbody>
                                     </table>
+                                    </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>
