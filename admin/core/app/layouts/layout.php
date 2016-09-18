@@ -60,8 +60,8 @@
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
                   <span class=""><?php if(isset($_SESSION["user_id"]) ){ echo UserData::getById($_SESSION["user_id"])->name; 
                   if(Core::$user->kind_id==1){ echo " (Administrador)"; }
-                  else if(Core::$user->kind_id==2){ echo " (Almacenista)"; }
-                  else if(Core::$user->kind_id==3){ echo " (Vendedor)"; }
+                  else if(Core::$user->kind_id==2){ echo " (Autor)"; }
+                  else if(Core::$user->kind_id==3){ echo " (Lector)"; }
 
                   }else if (isset($_SESSION["client_id"])){ echo PersonData::getById($_SESSION["client_id"])->name." (Cliente)" ;}?> <b class="caret"></b> </span>
 
@@ -104,13 +104,28 @@
             <li class="header">ADMINISTRACION</li>
             <?php if(isset($_SESSION["user_id"])):?>
               <li><a href="./"><i class='fa fa-dashboard'></i> <span>Dashboard</span></a></li>
-              <li><a href="./index.php?view=posts"><i class='fa fa-file-text-o'></i> <span>Posts</span></a></li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-file-text-o"></i>
+            <span>Posts</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="./?view=posts"><i class="fa fa-circle-o"></i> Posts</a></li>
+            <li><a href="./?view=newpost"><i class="fa fa-circle-o"></i> New post</a></li>
+            <li><a href="./?view=categories"><i class="fa fa-circle-o"></i> Categorias</a></li>
+            <li><a href="./?view=tags"><i class="fa fa-circle-o"></i> Etiquetas</a></li>
+          </ul>
+        </li>
+
+
               <li><a href="./index.php?view=pages"><i class='fa fa-file'></i> <span>Paginas</span></a></li>
               <li><a href="./index.php?view=galery"><i class='fa fa-picture-o'></i> <span>Galeria</span></a></li>
               <li><a href="./index.php?view=comments"><i class='fa fa-comments'></i> <span>Comentarios</span></a></li>
               <li><a href="./index.php?view=msgs"><i class='fa fa-envelope-o'></i> <span>Mensajes</span></a></li>
-              <li><a href="./index.php?view=categories"><i class='fa fa-th-list'></i> <span>Categorias</span></a></li>
-              <li><a href="./index.php?view=tags"><i class='fa fa-tag'></i> <span>Etiquetas</span></a></li>
               <li><a href="./index.php?view=users"><i class='fa fa-user'></i> <span>Usuarios</span></a></li>
               <li><a href="./index.php?view=generalcfg"><i class='fa fa-cogs'></i> <span>Configuracion</span></a></li>
 
@@ -133,7 +148,7 @@
 
         <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.1
+          <b>Version</b> 3.1
         </div>
         <strong>Copyright &copy; 2016 <a href="http://evilnapsis.com/" target="_blank">Evilnapsis</a></strong>
       </footer>

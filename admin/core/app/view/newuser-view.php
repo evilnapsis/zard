@@ -1,4 +1,4 @@
-
+<section class="content">
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -70,3 +70,4 @@
                 </div>
                 <!-- /.row -->
 <br><br><br><br><br>
+</section>

@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $data["posts"] = ConfigData::getAll();
 ?>
@@ -21,10 +22,8 @@ $data["posts"] = ConfigData::getAll();
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-th-list fa-fw"></i> Posts</h3>
-                            </div>
+                        <div class="box box-primary">
+                            <div class="box-body">
                                 <form method="post" action="./?action=updategeneralcfg">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -47,7 +46,9 @@ $data["posts"] = ConfigData::getAll();
                                         </tbody>
                                     </table>
                                     </form>
+                                    </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>

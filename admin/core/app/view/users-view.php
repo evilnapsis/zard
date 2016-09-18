@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $data["posts"]=UserData::getAll();
 ?>
@@ -22,10 +23,8 @@ $data["posts"]=UserData::getAll();
                 <div class="row">
                     <div class="col-lg-12">
                     <a href="./?view=newuser" class="btn btn-default">Agregar</a><br><br>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-users fa-fw"></i> Usuarios</h3>
-                            </div>
+                        <div class="box box-primary">
+                            <div class="box-body">
                                     <table class="table datatable table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -54,6 +53,8 @@ $data["posts"]=UserData::getAll();
                                         </tbody>
                                     </table>
                         </div>
+                        </div>
                     </div>
                 </div>
                 <!-- /.row -->
+                </section>

@@ -1,3 +1,4 @@
+<section class="content">
 <?php
 $user = UserData::getById($_GET["id"]);
 ?>
@@ -79,3 +80,4 @@ $user = UserData::getById($_GET["id"]);
                 </div>
                 <!-- /.row -->
 <br><br><br><br><br>
+</section>
