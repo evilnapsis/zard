@@ -122,6 +122,15 @@ create table post_view(
 );
 
 
+create table widget(
+	id int not null auto_increment primary key,
+	title varchar(100) not null,
+	func varchar(100) not null,
+	params text not null,
+	status int default 1,
+	ord int
+);
+
 /*
 Kind of config
 1.- input text

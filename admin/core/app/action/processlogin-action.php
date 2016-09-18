@@ -4,12 +4,13 @@
 // include("core/controller/Database.php");
 
 if(Session::getUID()=="") {
-$user = $_POST['email'];
+
+$user = $_POST['username'];
 $pass = sha1(md5($_POST['password']));
 
 $base = new Database();
 $con = $base->connect();
-$sql = "select * from user where (email= \"".$user."\" or username= \"".$user."\") and password= \"".$pass."\" and is_active=1";
+ $sql = "select * from user where ( (email!=\"\" and (email= \"".$user."\" and password= \"".$pass."\")) or (username!=\"\" and (username= \"".$user."\" and password= \"".$pass."\") )) and is_active=1";
 //print $sql;
 $query = $con->query($sql);
 $found = false;
@@ -32,7 +33,7 @@ if($found==true) {
 }
 
 }else{
-	print "<script>window.location='index.php?view=home';</script>";
+	print "<script>window.location='./';</script>";
 	
 }
 ?>

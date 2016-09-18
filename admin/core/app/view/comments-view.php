@@ -34,6 +34,8 @@ $comments = CommentData::getAll();
                                                 <th>Nombre</th>
                                                 <th>Email</th>
                                                 <th>Post</th>
+                                                <th>Estado</th>
+                                                <th>Fecha</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -48,6 +50,9 @@ $comments = CommentData::getAll();
                                                 <td><?=$post->name;?></td>
                                                 <td><?=$post->email;?></td>
                                                 <td><?php if($post->comment_id==null){ echo "<a href='../?view=post&id=".$thepost->id."'>".$thepost->title."</a>";}?></td>
+                                                <td><?=$post->is_public==1?"<span class='label label-primary'>Aprobado</span>":"<span class='label label-warning'>Pendiente<span>";?></td>
+                                                <td><?=$post->created_at;?></td>
+
                                                 <td style="width:120px;">
                                                 <?php if(!$post->is_public):?>
                                                 <a href="./?action=aprovecomment&id=<?=$post->id;?>" class="btn btn-xs btn-primary"><i class="fa fa-thumbs-up"></i></a>

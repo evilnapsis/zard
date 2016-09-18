@@ -72,7 +72,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-right">
-                      <a href="./logout.php" class="btn btn-default btn-flat">Salir</a>
+                      <a href="./?action=processlogout" class="btn btn-default btn-flat">Salir</a>
                     </div>
                   </li>
                 </ul>
@@ -126,6 +126,21 @@
               <li><a href="./index.php?view=galery"><i class='fa fa-picture-o'></i> <span>Galeria</span></a></li>
               <li><a href="./index.php?view=comments"><i class='fa fa-comments'></i> <span>Comentarios</span></a></li>
               <li><a href="./index.php?view=msgs"><i class='fa fa-envelope-o'></i> <span>Mensajes</span></a></li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-paint-brush"></i>
+            <span>Apariencia</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="./?view=widgets"><i class="fa fa-circle-o"></i> Widgets</a></li>
+          </ul>
+        </li>
+
+
               <li><a href="./index.php?view=users"><i class='fa fa-user'></i> <span>Usuarios</span></a></li>
               <li><a href="./index.php?view=generalcfg"><i class='fa fa-cogs'></i> <span>Configuracion</span></a></li>
 
@@ -153,39 +168,13 @@
         <strong>Copyright &copy; 2016 <a href="http://evilnapsis.com/" target="_blank">Evilnapsis</a></strong>
       </footer>
       <?php else:?>
-        <?php if(isset($_GET["view"]) && $_GET["view"]=="clientaccess"):?>
-<div class="login-box">
-      <div class="login-logo">
-        <a href="./"><b>ZARD</a>
-      </div><!-- /.login-logo -->
-      <div class="login-box-body">
-      <center><h4>Cliente</h4></center>
-        <form action="./?action=processloginclient" method="post">
-          <div class="form-group has-feedback">
-            <input type="text" name="username" required class="form-control" placeholder="Usuario"/>
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
-          </div>
-          <div class="form-group has-feedback">
-            <input type="password" name="password" required class="form-control" placeholder="Password"/>
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
-          <div class="row">
 
-            <div class="col-xs-12">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Acceder</button>
-              <a href="./" class="btn btn-default btn-block btn-flat"><i class="fa fa-arrow-left"></i> Regresar</a>
-            </div><!-- /.col -->
-          </div>
-        </form>
-      </div><!-- /.login-box-body -->
-    </div><!-- /.login-box -->  
-        <?php else:?>
 <div class="login-box">
       <div class="login-logo">
         <a href="./"><b>ZARD</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-      <center><h4>Admin</h4></center>
+      <center><h4>Welcome to Zard CMS</h4></center>
         <form action="./?action=processlogin" method="post">
           <div class="form-group has-feedback">
             <input type="text" name="username" required class="form-control" placeholder="Usuario"/>
@@ -199,13 +188,12 @@
 
             <div class="col-xs-12">
               <button type="submit" class="btn btn-primary btn-block btn-flat">Acceder</button>
-              <a href="./?view=clientaccess" class="btn btn-default btn-block btn-flat">Acceso al cliente <i class="fa fa-arrow-right"></i> </a>
             </div><!-- /.col -->
           </div>
         </form>
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->  
-      <?php endif;?>
+
       <?php endif;?>
 
 

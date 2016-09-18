@@ -91,6 +91,12 @@ class CommentData {
 		return Model::many($query[0],new CommentData());
 	}
 
+	public static function getApproveds($n){
+		$sql = "select * from ".self::$tablename." where kind=1 and post_id is not NULL and is_public order by created_at limit $n";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new CommentData());
+	}
+
 
 	public static function getApprovedByPostId($id){
 		$sql = "select * from ".self::$tablename." where post_id=$id and is_public order by created_at";

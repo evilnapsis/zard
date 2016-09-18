@@ -68,8 +68,8 @@ class PostData {
 	}
 
 
-	public static function getLast10(){
-		$sql = "select * from ".self::$tablename." where is_public=1 and kind=1 order by created_at desc limit 10";
+	public static function getLast($n){
+		$sql = "select * from ".self::$tablename." where status=1 and kind=1 order by created_at desc limit $n";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PostData());
 	}

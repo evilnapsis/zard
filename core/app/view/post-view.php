@@ -10,6 +10,7 @@ Viewer::addView($post->id,"post_id","post_view");
       <p><a href="./admin/?view=editpost&id=<?php echo $post->id; ?>" class="btn btn-warning">Modificar Articulo</a>
     <?php endif;?>
 		<h1><?php echo $post->title;?></h1>
+        <p class="text-muted"><i class='fa fa-clock-o'></i> <?php echo date("d-M-Y h:i:s",strtotime($post->created_at)); ?></p>
 	<hr>
 <?php if($post->show_image&&$post->image_id!=null):
 $image = ImageData::getById($post->image_id);

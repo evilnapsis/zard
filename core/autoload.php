@@ -17,6 +17,7 @@ include "admin/core/controller/Viewer.php";
 include "admin/core/controller/Session.php";
 include "admin/core/controller/IpLogger.php";
 
+include "admin/core/controller/Widget.php";
 
 
 ?>

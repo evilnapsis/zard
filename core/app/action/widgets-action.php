@@ -1,13 +1,16 @@
 <?php
-$categories = TaxData::getCategories();
+$widgets = WidgetData::getPublics();
+if(count($widgets)>0){
+	foreach($widgets as $w){
+		$widget = "<div class='panel panel-default'>";
+		$widget .= "<div class='panel-heading'>".$w->title."</div>";
+		$widget .="<div class='panel-body'>";
+		$widget .= call_user_func(array(new Widget(),$w->func), $w->params);
+		$widget.="</div></div>";
+		echo $widget;
+	}
+}
+
+
+
 ?>
-<?php if(count($categories)>0):?>
-<div class="panel panel-default">
-<div class="panel-heading">CATEGORIAS</div>
-<div class="list-group">
-<?php foreach($categories as $cat):?>
-  <a href="#" class="list-group-item"><?=$cat->name;?></a>
-<?php endforeach;?>
-</div>
-</div>
-<?php endif;?>
